@@ -52,9 +52,9 @@ class TaskManagerApp:
         if selected:
             index = selected[0]
             task_text = self.task_listbox.get(index)
-            if not task_text.startswith("✔️"):
+            if not task_text.startswith("✔"):
                 self.task_listbox.delete(index)
-                self.task_listbox.insert(index, f"✔️ {task_text}")
+                self.task_listbox.insert(index, f"✔ {task_text}")
         else:
             messagebox.showinfo("Sin selección", "Seleccione una tarea para marcar como completada.")
 
